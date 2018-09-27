@@ -12,6 +12,7 @@
           <p><%= photo.content %></p>
         </div>
         <div>
+          <%= render "likes/like_button", photo: photo %>
           <% if current_user == photo.user %>
             <%= link_to "Delete", photo, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
           <% end %>
