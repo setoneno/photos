@@ -30,7 +30,7 @@ class User < ApplicationRecord
   end
   
   def feed_photos
-    photo.where(user_id: self.following_ids + [self.id])
+    Photo.where(user_id: self.following_ids + [self.id])
   end
   
   def like(photo)

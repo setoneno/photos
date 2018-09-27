@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180907073940) do
-   create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+ActiveRecord::Schema.define(version: 20180927112145) do
+
+  create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "photo_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["photo_id"], name: "index_likes_on_photo_id", using: :btree
     t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20180907073940) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
     t.index ["user_id"], name: "index_photos_on_user_id", using: :btree
   end
 

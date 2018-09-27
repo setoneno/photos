@@ -1,4 +1,4 @@
-class photosController < ApplicationController
+class PhotosController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:destroy]
 
@@ -23,7 +23,7 @@ class photosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:content)
+    params.require(:photo).permit(:content, :image) 
   end
 
   def correct_user
