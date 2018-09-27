@@ -53,4 +53,4 @@ production:
   pool: 5
   database: photo_production
   username: photo
-  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
+  password: <%= ENV['PHOTOS_DATABASE_PASSWORD'] %>

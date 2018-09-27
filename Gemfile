@@ -54,10 +54,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kaminari'
 
-group :production do
-  gem 'pg', '0.21.0'
-end
+
 
 gem 'carrierwave' 
 
+gem 'cloudinary'
+
 gem 'rmagick'
+
+group :production do
+  gem 'pg', '0.21.0'
+end
