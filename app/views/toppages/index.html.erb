@@ -5,8 +5,8 @@
         <div class="form-group">
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
-        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
-        <%= f.file_field :image, id: :photo_image %>
+        <%= f.file_field :image, id: :photo_image %><br>
+        <%= f.submit 'Post', class: 'btn btn-success btn-lg' %>
       <% end %>
     </aside>
     <div class="col-xs-8">
@@ -16,7 +16,7 @@
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">
-      <h1>Welcome to the photos</h1>
+      <h1>Welcome to the Photos</h1>
       <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
     </div>
   </div>
